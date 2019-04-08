@@ -11,12 +11,26 @@
 	<form action="">
 		<h1>UTEC - Login</h1>
 		<div>
-			<input type="text" placeholder="UTEC ID" required="Campo obligatorio" id="username" pattern="sebastian" />
-			<input type="text" placeholder="UTEC Code" required="Campo obligatorio" id="password" pattern="2018" />
+			<input type="text" placeholder="UTEC ID" required="Campo obligatorio" id="username"  />
+			<input type="text" placeholder="UTEC Code" required="Campo obligatorio" id="password" />
 </div>
 <div>
-	<input type="submit" value="Log in" />
+	<input type="submit" value="Log in" onclick=logear() id="log"></input></div>	
+
 </div>
+<script>
+	function logear(){
+		var user="sebastian.quispe.b";
+		var password="201810223";
+		var userid= document.getElementById("username");
+		var passid= document.getElementById("password");
+		if (user==userid.value && password=passid.value){
+			window.alert("Login Succesfull")
+		}else{window.alert("Invalid user or password")
+		}
+
+	}
+</script>
 </body>
 
 </html>
